@@ -1,0 +1,26 @@
+{
+    "routes": [
+        {
+            "route": "/logout",
+            "redirect": "/.auth/logout"
+        },
+        {
+            "route": "/named-dogs",
+            "allowedRoles": [
+                "authenticated"
+            ]
+        },
+        {
+            "route": "/api/named-dogs",
+            "allowedRoles": [
+                "authenticated"
+            ]
+        }
+    ],
+    "responseOverrides": {
+        "401": {
+            "statusCode": 302,
+            "redirect": "/login"
+        }
+    }
+}

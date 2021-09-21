@@ -1,0 +1,16 @@
+{
+  "name": "the-loved-mutt",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "svelte-kit dev & swa start http://localhost:3000 --api ./api",
+    "build": "svelte-kit build",
+    "preview": "svelte-kit preview"
+  },
+  "devDependencies": {
+    "@azure/static-web-apps-cli": "^0.4.0",
+    "@sveltejs/adapter-static": "^1.0.0-next.13",
+    "@sveltejs/kit": "next",
+    "svelte": "^3.34.0"
+  },
+  "type": "module"
+}
