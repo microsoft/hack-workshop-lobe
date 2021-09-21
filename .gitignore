@@ -1,5 +1,9 @@
 .DS_Store
 node_modules
-/.svelte-kit
-/build
-/functions
+.venv
+/site
+/exports/**
+!/exports/.gitkeep
+
+apps/web-bootstrap/public/model/**
+

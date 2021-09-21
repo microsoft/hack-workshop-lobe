@@ -1,0 +1,31 @@
+site_name: Lobe Workshop
+docs_dir: goals
+extra_css:
+  - stylesheets/extra.css
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - smarty
+  - toc:
+      permalink: True
+plugins: 
+  - include-markdown
+theme:
+  name: material
+  features:
+    - navigation.indexes
+    - navigation.instant
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+nav:
+    - Overview: 'index.md'
+    - 'Goals':
+      - '0-obtain-source.md'
+      - '1-train.md'
+      - '2-test.md'
+      - '3-export.md'
+      - '4-run.md'

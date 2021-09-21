@@ -1,78 +1,81 @@
-# Scenario : The Loved Mutt
+# Scenario: Getting started with Lobe 
 
-According to the American Society for the Prevention of Cruelty to Animals (ASPCA), animal shelters receive about 3 million dogs annually - about 6 dogs per minute! While euthanasia rates have dropped, over 500,000 dogs are euthanized because they could not be matched with their original owners or an adoptive family.
+Ever wish you could be alerted when your package has arrived at your door without relying on less-than-accurate delivery-tracking apps? What about needing someone else count your reps during your workout? 
 
-Your team will aid a fictional adoption agency with deploying their website to the cloud. The application is designed to raise awareness of different dog breeds. A potential adopter can use the app to flip through pictures of various dogs and come up with potential names for each dog. This can be a great way to get a family excited about the possibility of adopting a new pet!
+[Lobe] is here to the rescue! [Lobe] is a free, private desktop application that has everything you need to take your machine learning ideas from prototype to production. 
 
-The agency has already created the website using [Svelte](https://svelte.dev/) and [Svelte Kit](https://kit.svelte.dev/) for the front end, [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview?WT.mc_id=academic-28005-chrhar) and a [MongoDB API database](https://docs.mongodb.com/drivers/node/current/) for the back-end. They have provided documentation your team can review to gain an understanding of how it works, and run it locally for testing purposes.
+In this lab, you'll build an [image classification](https://www.lobe.ai/docs/welcome/welcome#what-is-image-classification) model to solve a problem that you and your team come up with together.
 
 ## Prerequisites
 
-Each team member will need an Azure account. With [Azure for Students](https://aka.ms/a4s?WT.mc_id=academic-28005-chrhar), you can access $100 in free credit, and a large suite of free services!
-
+### Skills
 Your team should be familiar with the following:
 
 - Git and GitHub
-  - [Forking](https://docs.github.com/github/getting-started-with-github/quickstart/fork-a-repo) and [cloning](https://docs.github.com/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) repositories
-  - [Creating and managing branches](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/managing-branches)
-- HTML, CSS and JavaScript
+    - [Forking](https://docs.github.com/github/getting-started-with-github/quickstart/fork-a-repo) and [cloning](https://docs.github.com/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) repositories
+    - [Creating and managing branches](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/managing-branches)
+- Using a terminal (e.g., Bash, PowerShell, etc.)
 
+### Hardware
+- A computer capable of running arbitrary code and on which you have administrative rights
+    !!! Danger
+        Lobe is not currently supported on Apple computers with the M1 chip
+- A stable internet connection (for setup and data download only)
+
+### Software
 Each member of your team will also need the following software installed:
 
+- [Lobe](https://www.lobe.ai/)
 - [Git](https://git-scm.com/downloads)
-  - [Install git on macOS](https://git-scm.com/download/mac)
-  - [Install git on Windows](https://git-scm.com/download/win)
-  - [Install git on Linux](https://git-scm.com/download/linux)
-- [Visual Studio Code](https://code.visualstudio.com/)
+    - [Install git on macOS](https://git-scm.com/download/mac)
+    - [Install git on Windows](https://git-scm.com/download/win)
+    - [Install git on Linux](https://git-scm.com/download/linux)
+- [Visual Studio Code](https://code.visualstudio.com/) or any another text editor or IDE (e.g., WebStorm, Notepad++, Atom, Brackets, etc.)
 - [Node.js](https://nodejs.org/)
-  - [Install Node.js on Windows](https://docs.microsoft.com/windows/dev-environment/javascript/nodejs-on-windows?WT.mc_id=academic-28005-chrhar)
-  - [Install Node.js on Linux or MacOS](https://github.com/nvm-sh/nvm#installing-and-updating)
-- [Azure Functions Core Tools](https://www.npmjs.com/package/azure-functions-core-tools), which can be installed by running the following command (after Node.js and npm are installed)
+    - [Install Node.js on Windows](https://docs.microsoft.com/windows/dev-environment/javascript/nodejs-on-windows)
+    - [Install Node.js on Linux or MacOS](https://github.com/nvm-sh/nvm#installing-and-updating)
+- [Yarn](https://yarnpkg.com/getting-started/install#per-project-install)
 
-  ```bash
-  npm i -g azure-functions-core-tools@3 --unsafe-perm true
-  ```
 
 ## Resources
 
 A series of resources will be provided to help your team determine the appropriate steps for completion. The resources provided should provide your team with enough information to achieve each goal. If you get stuck, you can always ask a mentor for additional help.
 
-A [sample of the site](https://calm-glacier-0b7804d10.azurestaticapps.net/) has been deployed so you can see how it looks in action.
 
 ## Exploring the source code
 
-There are two key folders for the application: [src/routes](../src/routes), which contains the Svelte files used for the front-end, and [api](../api), which contains the Azure Functions used for the back-end. The flow of the application is as follows:
+The key folder for the application, [apps](./apps), contains a [starter web application](./apps/web-bootstrap) in which to drop an exported model from Lobe. The flow of the application is as follows:
 
-1. A user navigates to the page and is presented with the option to login (and sees a picture of a cute dog)
-1. User authenticates using their GitHub credentials
-1. After authenticating, the user can now name dogs. Each time they name a dog, it's saved to a Mongo API database.
-1. The user can click on the "named dogs" link to review the list of dogs they've named
+1. A user navigates to the page and is presented with the option to take a photo or upload a photo
+1. User takes a photo using their device's camera or uploads a photo from their device.
+1. After submitting the photo, the model will attempt to classify and tag the photo.
 
-> **Note**: No updates to the application code will be made during this workshop. Your team will be able to successfully complete the workshop without any experience with Svelte. The only file your team will modify is *staticwebapp.config.json*.
-
-![Flow of the app](./goals/media/app-flow.svg)
+!!! Info 
+    No updates to the application code will be made during this workshop. Your team will be able to successfully complete the workshop without any experience with React. The only files your team will add are generated by the Lobe app exporting function.
 
 ## Goals
 
-Your team will obtain the starter, deploy the application to the cloud, enable authentication, and create and configure the database.
+Your team will obtain the starter, train the model, and use the model in locally-run web application.
 
 1. [Obtain the source code](./goals/0-obtain-source.md):
    The first step when working with any codebase is to download it. Your team's first goal will be to obtain the code from GitHub.
-1. [Deploy to the cloud](./goals/1-deploy.md):
-   Because the Loved Mutt wants the application to be publicly available, your team will need to deploy the application. For this workshop, your team will use Azure Static Web Apps, which is able to host the application and run the Azure Functions.
-1. [Enable authentication](./goals/2-authentication.md):
-   A key component of the app is allowing users to name dogs and have the names saved to a list. This requires authentication, which is built-in to Azure Static Web Apps. To achieve this goal, your team will configure the application so *only* GitHub authentication is enabled.
-1. [Add a database](./goals/3-database.md):
-   Saving information typically requires a database, and this application is no different. The code has already been added to use a Mongo API database, which is available through Cosmos DB on Azure. Your team will create a Cosmos DB account, and then update the application on Azure Static Web Apps to use your newly created database.
-
-## Validation
-
-This workshop is designed to be a goal-oriented self-exploration of Azure and related technologies. Your team can use the [validation tool](https://ashy-mushroom-0609d7c10.azurestaticapps.net/) to confirm the *Deploy to the cloud* and *Enable authentication* goals have been met. Validating the final goal of *Add a database* will be manual - you'll use the application your team deployed and confirm it works as expected.
+2. [Train the model](./goals/1-train.md):
+   Because we need a model to classify photos, your team will first need to train a model. For this workshop, your team will Lobe, which will train the model for you based on photos and tags that your team selects.
+3. [Test the model](./goals/2-test.md):
+   A key aspect of training a model is testing and improving it. Here you will take or upload photos to improve the model by fine-tuning it's training.
+4. [Export the model](./goals/3-export.md):
+   Our webapp will only work if it has a model to run! You will use Lobe to export your model as a TensorFlow.js script and model files.
+5. [Run the app](./goals/4-run.md):
+   Run your app! For this goal, you will run your web application on your local computer and try to classify images with it.
 
 ## Where do we go from here?
 
 This project is designed as a potential seed for future development. If you were to continue with this idea, your team could potentially:
 
-- Use the [Petfinder API](https://www.petfinder.com/developers/) to create an application to match potential adopters with dogs
-- Use the [Bing Maps API](https://docs.microsoft.com/bingmaps/getting-started/?WT.mc_id=academic-28005-chrhar) to search based on location
-- Use [Custom Vision](https://azure.microsoft.com/services/cognitive-services/custom-vision-service/?WT.mc_id=academic-28005-chrhar) to identify dog breeds
+- Deploy and [run your model on a Raspberry Pi](https://learn.adafruit.com/machine-learning-101-lobe-braincraft) and use a camera module to take photos!
+- Build a [Rock, Paper, Scissors game](https://learn.adafruit.com/lobe-rock-paper-scissors) and play against your model!
+- Build a [Package Detector](https://learn.adafruit.com/build-an-ml-package-detector) and get notifications when a package is left at your door!
+
+
+<!-- References -->
+[Lobe]: https://www.lobe.ai/
