@@ -17,9 +17,10 @@ Your team should be familiar with the following:
 - Using a terminal (e.g., Bash, PowerShell, etc.)
 
 ### Hardware
+!!! Danger
+    Lobe is not currently supported on Apple computers with the M1 chip
+
 - A computer capable of running arbitrary code and on which you have administrative rights
-    !!! Danger
-        Lobe is not currently supported on Apple computers with the M1 chip
 - A stable internet connection (for setup and data download only)
 
 ### Software
