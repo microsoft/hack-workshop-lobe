@@ -1,7 +1,70 @@
+# Project information
 site_name: Lobe Workshop
+site_url: https://microsoft.github.io/hack-workshop-lobe/
+site_author: Microsoft
+site_description: >-
+  Learn to use the Lobe.ai app to build your own image classification models!
+
+# Repository
+repo_name: microsoft/hack-workshop-lobe
+repo_url: https://github.com/microsoft/hack-workshop-lobe
+
+copyright: Copyright &copy; Microsoft
+
+# Project structure
 docs_dir: goals
+
+# Customizations & theme
 extra_css:
-  - stylesheets/extra.css
+  - assets/stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/microsoft
+      name: Microsoft on GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/Microsoft/
+      name: Microsoft on LinkedIn
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/Microsoft
+      name: Microsoft on Twitter
+  tos:
+    - link: https://privacy.microsoft.com/
+      name: Privacy
+    - link: https://www.microsoft.com/en-us/legal/terms-of-use
+      name: Terms of Use
+    - link: https://github.com/microsoft/hack-workshop-lobe/blob/main/LICENSE
+      name: License
+
+theme:
+  name: material
+  custom_dir: theme
+  features:
+    - navigation.indexes
+    - navigation.instant
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+  font: false
+  logo: assets/images/icon_garage_white.png
+  palette:
+    - media: "(prefers-color-scheme: light)" 
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)" 
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    
+# Extensions
 markdown_extensions:
   - admonition
   - attr_list
@@ -11,16 +74,12 @@ markdown_extensions:
   - smarty
   - toc:
       permalink: True
+
+# Plugins 
 plugins: 
   - include-markdown
-theme:
-  name: material
-  features:
-    - navigation.indexes
-    - navigation.instant
-    - navigation.expand
-    - navigation.top
-    - toc.integrate
+
+# Navigation
 nav:
     - Overview: 'index.md'
     - 'Goals':
