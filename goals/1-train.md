@@ -22,7 +22,7 @@ Image classification is categorizing an image into a single label to represent i
 
 Here are some helper questions to answer to make choosing your labels easier:
 
-1. What information would 
+1. What information would clarify what is in the image?
 1. How complex is the object?
 1. How similar are the objects with the same label? How different are the objects that have different labels?
 
