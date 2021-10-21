@@ -7,15 +7,18 @@ To use the model in the [sample web application], you first need to *export* the
 ## Application notes
 
 ### How to export the model
+
 1. In the `Use` tab, select the `Export` button
-2. Select `TensorFlow.js`
-3. Choose the [/exports](../exports) folder in the project as the destination folder
+1. Select `TensorFlow.js`
+1. Choose the [/exports](../exports) folder in the project as the destination folder
 
 ### Exported model folder structure
+
 There are a few key elements in the main export directory. Your model in json format (model.json), its weights as binary shard files (.bin), and signature.json which contains information about your Lobe project.
 
 This is what the folder structure of your exported model should look like:
-```
+
+```output
 exports/
   <Project Name> TensorFlowJS/
     example/
@@ -30,8 +33,7 @@ exports/
 
 ### Move model into web application
 
-Copy the contents from your exported model folder into  `apps/web-bootstrap/public/model` folder in the [sample web application]. 
-
+Copy the contents from your exported model folder into  `apps/web-bootstrap/public/model` folder in the [sample web application].
 
 ## Success criteria
 
