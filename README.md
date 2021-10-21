@@ -61,7 +61,7 @@ Your team will obtain the starter, train the model, and use the model in locally
 1. [Obtain the source code](./goals/0-obtain-source.md):
    The first step when working with any codebase is to download it. Your team's first goal will be to obtain the code from GitHub.
 2. [Train the model](./goals/1-train.md):
-   Because we need a model to classify photos, your team will first need to train a model. For this workshop, your team will Lobe, which will train the model for you based on photos and tags that your team selects.
+   Because we need a model to classify photos, your team will first need to train a model. For this workshop, your team will use Lobe, which will train the model for you based on photos and tags that your team selects.
 3. [Test the model](./goals/2-test.md):
    A key aspect of training a model is testing and improving it. Here you will take or upload photos to improve the model by fine-tuning it's training.
 4. [Export the model](./goals/3-export.md):
