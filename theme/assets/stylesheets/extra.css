@@ -63,13 +63,6 @@
   --md-typeset-a-color: var(--md-primary-fg-color--light);
 }
 
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
 figcaption {
   max-width: 80% !important;
 }
