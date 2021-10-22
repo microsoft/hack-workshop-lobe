@@ -33,6 +33,7 @@ Here are some things to keep in mind as you refine your model:
 - When you have filled the label bar completely, your model has been fine-tuned to achieve 100% classification accuracy
 
     ![Screenshot of Lobe user interface, showing the prediction accuracy rate for all labels and in aggregate](./media/lobe-ui_improve-label.png)
+    
     <small>That's not a moth! Reject!</small>
 
 
