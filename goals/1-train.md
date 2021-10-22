@@ -53,7 +53,7 @@ Your team might find these resources helpful:
 
 After you finish training your model, you should see a page which looks like the following:
 
-![Screenshot of the starting page, showing a link to login, a picture of a dog with the heading Isn't this a cute Pekinese dog?](./media/_lobe_la_bel-complete.png)
+![Screenshot of the starting page, showing a link to login, a picture of a dog with the heading Isn't this a cute Pekinese dog?](./media/lobe_label-complete.png)
 
 ## Tips
 
@@ -64,6 +64,7 @@ After you finish training your model, you should see a page which looks like the
 - The average file size of the images in your dataset
 
 💡 The label progress bars fill up as you add images. The number of photos needed will vary:
+
 ![Screenshot of the Lobe application user interface, which shows progress bars underneath labels with the number of photos for each label](./media/lobe-ui_label-progress-bars.png)
 
 ## Next challenge

@@ -34,6 +34,7 @@ After you have installed all of the project dependencies, you are all set to run
 1. Open the website by navigating to [http://localhost:3000](http://localhost:3000).
 
     ![Screenshot of the application landing page](./media/sample-web-app-ui.jpeg)
+
     <small>That's a sharpie, not a bird! The model will always attempt to label an image with the best fitting label it knows - even if it doesn't make sense.</small>
 
     > ⚠️ Browser permissions
